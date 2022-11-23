@@ -1,9 +1,15 @@
-var tasks=[]
-tasks = JSON.parse(localStorage.getItem("tasks"));
+if(JSON.parse(localStorage.getItem("tasks")) == null){
+    tasks = [];
+    var i = 0;
+}else{
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+    var i=tasks.lenght;
+}
+
 for(var k=0; k<tasks.length; k++){
     console.log(tasks[k])
 }
-var i=tasks.length;
+
 
 function addTask(){
     var text=document.getElementById('input').value;
