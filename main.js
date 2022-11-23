@@ -3,7 +3,7 @@ if(JSON.parse(localStorage.getItem("tasks")) == null){
     var i = 0;
 }else{
     tasks = JSON.parse(localStorage.getItem("tasks"));
-    var i=tasks.lenght;
+    var i=tasks.length;
 }
 
 for(var k=0; k<tasks.length; k++){
