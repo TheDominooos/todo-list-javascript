@@ -6,46 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista zadań</title>
     <script src="main.js"></script>
-    <style>
-        body{
-            height:100%;
-            margin:0px;
-        }
-        #main{
-            background-color: darkgrey;
-            position:absolute;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #container{
-            padding:50px;
-            background-color: rgb(23, 204, 105);
-            width: 40%;
-            height: 70%;
-        }
-        #taskContainer{
-            height: 80%;
-            overflow-y: scroll;
-            overflow-wrap: break-word;
-            text-overflow: ellipsis;
-        }
-        #task{
-            background-color: white;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
     <div id="main">
-        
         <div id="container">
             <h1>Lista zadań</h1>
-            <input id="input" type="text"/> <input type="button" value='Dodaj' onclick='addTask()'/>
+            <input id="input" type="text"/><input id="addButton" type="button" value='Dodaj' onclick='addTask()'/>
             <div id="taskContainer">
-                
+                <script>updateDisplay();</script>
             </div>
         </div>
     </div>
